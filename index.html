@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Notify ME - Recuerda qué hacías</title>
+    <link rel="shortcut icon" href="img/favicon.png" type="image/x-icon">
+    <!--Añadiendo la fuente: Poppins-->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <!--Añadiendo los Iconos de FontAwesome-->
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.14.0/css/all.css" integrity="sha384-HzLeBuhoNPvSl5KYnjx0BT+WB0QEEqLprO+NBkkk5gbc67FTaL7XIGa2w1L0Xbgc" crossorigin="anonymous">
+    <!--Añadiendo Normalize.css, para resetear los estilos por defecto del navegador-->
+    <link rel="stylesheet" href="https://necolas.github.io/normalize.css/8.0.1/normalize.css">
+    <!--Añadiendoo los estilos css-->
+
+    <link rel="stylesheet" href="css/styles.css">
+
+</head>
+<body>
+    <div class="container">
+        <div class="logo">
+            <img src="img/logo.png" alt="Logo de Notify ME">
+        </div>
+        <div class="content content-index">
+            <h1>Una notificación que te recuerda que debes pensar, a tu tiempo, a tu forma.
+                <br>
+                A tu manera.</h1>
+            <p class="button" id="start"> <a href="pages/add-notification.html">Comenzar</a> </p>
+        </div>
+        <footer>
+            <p>Web Development by <a class="footer-copy" target="_blank" href="https://github.com/tomastk">TomásTK</a> &copy; 2020</p>
+        </footer>
+    </div>
+
+    <script>
+        document.getElementById("start").addEventListener("click", (e) => {
+            document.location = "pages/add-notification.html"
+        })
+    </script>
+
+</body>
+</html>

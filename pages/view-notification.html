@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Notify ME - Recuerda qué hacías</title>
+    <link rel="shortcut icon" href="../img/favicon.png" type="image/x-icon" />
+    <!--Añadiendo la fuente: Poppins-->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet" />
+    <!--Añadiendo los Iconos de FontAwesome-->
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.14.0/css/all.css"
+        integrity="sha384-HzLeBuhoNPvSl5KYnjx0BT+WB0QEEqLprO+NBkkk5gbc67FTaL7XIGa2w1L0Xbgc" crossorigin="anonymous" />
+    <!--Añadiendo Normalize.css, para resetear los estilos por defecto del navegador-->
+    <link rel="stylesheet" href="https://necolas.github.io/normalize.css/8.0.1/normalize.css" />
+    <!--Añadiendoo los estilos css-->
+    <link rel="stylesheet" href="../css/styles.css" />
+</head>
+
+<body>
+
+    <div class="popup" id="popup">
+        <p>
+        La notificación ha sido enviada correctamente.
+        <a href="#" id="close-popup">Aceptar</a>
+        </p>
+    </div>
+
+
+    <div class="popup" id="popup-added">
+        <p>
+        La notificación ha sido enviada correctamente.
+        </p>
+    </div>
+
+    <div class="container">
+        <div class="logo">
+            <img src="../img/logo.png" alt="Logo de Notify ME" />
+        </div>
+
+        <div class="content">
+            <h1 class="content__title">Notificación Actual</h1>
+
+                <div class="input-group">
+                <label for="time" class="content__form-label">Tiempo de espera Actual:</label>
+                    <p class="content__form-input" id="time"></p>
+                    <p class="content__form-text">minutos</p>
+                </div>
+                <div class="input-group">
+                    <label for="text" class="content__form-label">Mensaje Personalizado Actual:</label>
+                    <p class="content__form-textarea" id="message"></p>
+                </div>
+
+                <input type="submit" value="Cambiar" class="button submit" id="submit"/>
+
+                <div class="input-group">
+                    <label for="show-notification" class="content__form-label check">Activar Notificaciones</label>
+                    <input type="checkbox" id="show-notification"class="content__form-input checkbox">
+                </div>
+
+                <div class="timer">
+                    <p>Notificación en: </p>
+                    <p class="seconds"> <span class="seconds-details">...</span> segundos </p>
+                </div>
+
+            </div>
+
+        <footer>
+            <p>
+                Web Development by
+                <a class="footer-copy" target="_blank" href="https://github.com/tomastk">TomásTK</a>
+                &copy; 2020
+            </p>
+        </footer>
+    </div>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/push.js/0.0.11/push.min.js"></script>
+    <script src="../scripts/view-notification.js"></script>
+    <script src="../scripts/send-notification.js"></script>
+    <script src="../scripts/countdown.min.js"></script>
+    <script>
+        document.getElementById("submit").addEventListener("click", (e) => {
+            document.location = "add-notification.html"
+        })
+    </script>
+</body>
+</html>

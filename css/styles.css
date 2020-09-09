@@ -1,0 +1,357 @@
+* {
+    font-family: "Poppins", sans-serif;
+    padding: 0;
+    margin: 0;
+    resize: none;
+}
+
+:root {
+    --main-color: #BC1111;
+}
+
+/* Añadiendo la estructura del layout*/
+
+.container {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    justify-content: space-around;
+}
+
+.logo{
+    margin: 10px;
+}
+.logo img{
+    margin: 10px;
+    width: 150px;
+    height: 150px;
+    display: block;
+    margin: auto;
+}
+
+.content{
+    flex: 1;
+    margin-bottom: 10px;
+}
+
+
+/* Añadiendo los estilos personalizados para el contenido de la página de inicio */ 
+
+.content-index{
+    padding: 1.5em;
+    margin: auto;
+}
+.content-index h1{
+    padding: 5px;
+    margin-bottom: 2px;
+    font-size: 20pt;
+    text-align: center;
+    font-weight: 600;
+}
+
+.button{
+    background-color: #BC1111;
+    padding: 20px;
+    font-size: 10pt;
+    font-weight: 600;
+    text-align: center;
+    text-transform: uppercase;
+    cursor: pointer;
+}
+
+.button a {
+    text-decoration: none;
+    color: white;
+}
+
+.container footer{
+    background-color: var(--main-color);
+    padding: 10px;
+    font-weight: 600;
+    font-size: 10pt;
+    color: white;
+    text-align: center;
+    text-transform: uppercase;
+}
+
+.container footer a{
+    color: white;
+}
+
+/* Estilos de Añade una Notificación */ 
+
+.content__title {
+    font-size: 23px;
+    text-align: left;
+    padding: 10px;
+    margin-block-start: 0em;
+    margin-block-end: 0em;
+    margin-inline-start: 0px;
+    margin-inline-end: 0px;
+}
+
+.content__form {
+    padding: 3px;
+}
+
+.content__form-label {
+    display: block;
+    text-align: left;
+    margin-bottom: 10px;
+    padding-top: 5px;
+    font-size: 18px;
+    font-weight: 400;
+}
+
+.input-group {
+    padding: 5px;
+}
+
+.content__form-input {
+    width: 20%;
+    outline: none;
+    border: 0;
+    background-color: var(--main-color);
+    border-radius: 10px;
+    color: white;
+    display: inline-block;
+    padding: 10px;
+}
+
+.content__form-text{
+    display: inline-block;
+}
+.content__form-textarea {
+    height: 100px;
+    color: black;
+    border: solid var(--main-color) 1px;
+    border-radius: 5px;
+    width: 80%;
+    margin: 10px;
+    overflow-x: hidden;
+    line-height: 20px; 
+    padding: 30px;
+    display: block;
+    outline: none;
+    margin: auto;
+    font-size: 20px;
+}
+.content__form-textarea::placeholder {
+    color: black;
+    box-sizing: border-box;
+    font-size: 20px;
+}
+
+.content__form-textarea:focus  .content__form-textarea::placeholder {
+    color: white;
+}
+.submit {
+    border: 0;
+    outline: 0;
+    margin: auto;
+    margin-top: 10px;
+    display: block;
+    color: white;
+    font-weight: 600;
+}
+
+/* Añadiendo el responsive desktop */
+.container{
+    opacity: 1;
+}
+
+.popup{
+    height: 100vh;
+    padding: 30px;
+    position: fixed;
+    display: flex;
+    align-items: center;
+    background-color: rgb(0, 0,0, .7);
+    display: none;
+    justify-content: center;
+    animation-name: show;
+}
+
+
+.popup p{
+    font-size: 30px;
+    color: black;
+    padding: 30px;
+    font-weight: 400;
+    text-align: center;
+    background-color: #fff;
+    border: var(--main-color) 2px solid;
+    border-radius: 10px;
+}
+.popup a{
+    display: block;
+    text-decoration: none;
+    background-color: var(--main-color);
+    padding: 10px;
+    color: white;
+    margin: 10px;
+}
+
+.popup a:hover{
+    background-color: rgb(114, 7, 7);
+}
+.close-ico {
+    display: block;
+    color: var(--main-color);
+    padding: 5px;
+    margin-left: 5px;
+}
+
+.close-ico::before {
+    font-size: 30px;
+}
+
+
+@media screen and (min-width: 800px) {
+
+    .logo img{
+        height: 200px;
+        width: 200px;
+    }
+
+    .content-index h1{
+        font-size: 40px;
+        line-height: 60px;
+        margin-bottom: 30px;
+    }
+
+    .button:hover {
+
+        cursor: pointer;
+        background-color: rgb(112, 2, 2);
+
+    }
+
+    .content {
+        width: 100vh;
+        margin: auto;
+        margin-bottom: 10px;
+    }
+    .popup {
+        width: 100%;
+    }
+    .popup i{
+        cursor: pointer;
+    }
+
+    .popup a{
+        margin-top: 10px;
+    }
+
+}
+
+/* Estilos añadidos por elementos de Javascript */
+
+.warning {
+    background-color: var(--main-color);
+    padding: 10px;
+    margin: 10px;
+}
+
+.warning p{
+    color: white;
+    text-align: center;
+    margin-bottom: 10px;
+    padding: 10px;
+}
+
+.warning a {
+    display: block;
+    background-color: rgb(134, 10, 10);
+    padding: 10px;
+    text-decoration: none;
+    color: white;
+    text-align: center;
+}
+
+.warning a:hover{
+    background-color: rgb(114, 7, 7);
+}
+
+.message {
+    color: var(--main-color);
+    margin-top: 10px;
+}
+
+footer a:hover{
+    color: black;
+}
+
+#stop {
+    display: block;
+    margin: auto;
+    outline: none;
+    cursor: pointer;
+    border: solid var(--main-color) 1px;
+    margin-top: 10px;
+    background: none;
+    transition: .5s;
+    padding: 10px;    
+}
+
+#stop:hover{
+    -webkit-box-shadow: inset 20px 2px 0px -16px rgba(188,17,17,1);
+    -moz-box-shadow: inset 20px 2px 0px -16px rgba(188,17,17,1);
+    box-shadow: inset 20px 2px 0px -16px rgba(188,17,17,1);
+}
+
+.check {
+    display: inline-block;
+}
+
+.checkbox {
+    background-color: white;
+    -webkit-appearance: none;
+    appearance: none;
+    -ms-appereance: none;
+    width: 60px;
+    position: relative;
+    border: solid var(--main-color) 2px;
+    top: 10px;
+    height: 30px;
+    margin: 0;
+    cursor: pointer;
+    transition: .2s;
+}
+
+
+.checkbox::after{
+    content: "";
+    background-color: var(--main-color);
+    width: 20px;
+    height: 20px;
+    position: absolute;
+    top: 3px;
+    left: 3px;
+    display: block;
+    transition: .2s;
+    border-radius: 50px;
+}
+
+.checkbox:checked{
+    background-color: var(--main-color);
+}
+
+.checkbox:checked::after {
+    background-color: white;
+    left: 30px;
+}
+
+.timer {
+    display:block;
+    width: 50%;
+    margin: auto;
+    background-color: var(--main-color);
+    text-align: center;
+    padding: 1em;
+    color: white;
+}
+
+.seconds{
+    display: inline-block;
+}

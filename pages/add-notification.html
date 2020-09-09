@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Notify ME - Recuerda qué hacías</title>
+    <link rel="shortcut icon" href="../img/favicon.png" type="image/x-icon" />
+    <!--Añadiendo la fuente: Poppins-->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet" />
+    <!--Añadiendo los Iconos de FontAwesome-->
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.14.0/css/all.css"
+        integrity="sha384-HzLeBuhoNPvSl5KYnjx0BT+WB0QEEqLprO+NBkkk5gbc67FTaL7XIGa2w1L0Xbgc" crossorigin="anonymous" />
+    <!--Añadiendo Normalize.css, para resetear los estilos por defecto del navegador-->
+    <link rel="stylesheet" href="https://necolas.github.io/normalize.css/8.0.1/normalize.css" />
+    <!--Añadiendoo los estilos css-->
+    <link rel="stylesheet" href="../css/styles.css" />
+</head>
+
+<body>
+
+    <div class="popup" id="popup">
+        <p>
+        La notificación ha sido añadida exitosamente.<br>Por favor,  ¡dale a aceptar y espera el tiempo que has seleccionado!
+        <a href="view-notification.html">Aceptar</a>
+        </p>
+
+
+    </div>
+
+    <div class="container">
+        <div class="logo">
+            <img src="../img/logo.png" alt="Logo de Notify ME" />
+        </div>
+
+        <div class="content" id="container">
+            <h1 class="content__title">Añade una notificación</h1>
+
+            <form class="content__form" id="form">
+                <div class="input-group time">
+                <label for="time" class="content__form-label">Introduce el tiempo a esperar:</label>
+                    <input type="number" name="time" class="content__form-input timeInput" id="time" />
+                    <p class="content__form-text">minutos</p>
+                </div>
+                <div class="input-group time">
+                    <label for="text" class="content__form-label">Introduce un mensaje personalizado:</label>
+                    <textarea class="content__form-textarea messageInput" name="text"
+                        placeholder="Por defecto, el texto dirá: '¡Hola! ¿Qué es lo que pensaste los últimos minutos?'" id="message"></textarea>
+                </div>
+                <input type="submit" value="Agregar" class="button submit" id="submit"/>
+            </form>
+        </div>
+
+        <footer>
+            <p>
+                Web Development by
+                <a class="footer-copy" target="_blank" href="https://github.com/tomastk">TomásTK</a>
+                &copy; 2020
+            </p>
+        </footer>
+    </div>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/push.js/0.0.11/push.min.js"></script>
+    <script src="../scripts/add-notification.js"></script>
+
+</body>
+</html>
